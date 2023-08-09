@@ -35,7 +35,7 @@ class CityRepository {
                 where:{
                     id:cityId
                 }
-            })
+            });
         } catch (error) {
             console.log("Something went wrong in the repository layer");
             throw{error};            
