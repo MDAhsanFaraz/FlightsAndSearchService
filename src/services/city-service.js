@@ -1,7 +1,8 @@
 const { CityRepository } = require('../repository/index');
 
 class CityService {
-	constructor() {
+	constructor() 
+	{
 		this.cityRepository = new CityRepository();//creating a new obj of class CityRepositiory 
 	}
 
