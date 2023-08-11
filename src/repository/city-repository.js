@@ -38,11 +38,11 @@ class CityRepository {
             //     }
             // });
             // for getting updated data in input we use below approach
-            const city=await City.findByPk(cityId);
-            city.name=data.name;
+            const city = await City.findByPk(cityId);
+            city.name = data.name;
             await city.save();
             return city;
-        } 
+        }
         catch (error) {
             console.log("Something went wrong in the repository layer");
             throw { error };
@@ -58,6 +58,16 @@ class CityRepository {
             throw { error };
         }
     }
+    async getAllCities() {
+        try {
+            const cities = await City.findAll();
+            return cities;
+        } catch (error) {
+            console.log("Something went wrong in the repository layer");
+            throw { error };
+        }
+    }
+
 
 }
 
