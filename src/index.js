@@ -18,7 +18,7 @@ const setupAndStartServer = async () => {
 
   app.listen(PORT, async () => {
     console.log(`Server started at ${PORT}`);
-    // db sync is same as migration we do it manually it will create modle in the data base and the tables just like migrations
+    // db sync is same as migration we do it manually it will create modle in the data base and the tables just like migrationsaa
     //     if (process.env.SYNC_DB) {
     //         db.sequelize.sync({ alter: true });
     //     }
