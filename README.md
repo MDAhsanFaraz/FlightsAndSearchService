@@ -37,7 +37,14 @@
 - Once you've added your db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create`
 and then execute
 
-`npx sequelize db:migrate`
+`npx sequelize db:migrate`<br>
+`npx sequelize db:seed:all`
+### then in then main index.js uncommnent    
+` //     if (process.env.SYNC_DB) 
+ {         db.sequelize.sync({ alter: true });
+       }`
+this line of code start the server by `npm start` then again comment it out 
+#### this the only way to create the association mentioned int the model where airport belongs to many city and on deleting a city all airports also get delted Because of onDelete casade
 ```
 
 
